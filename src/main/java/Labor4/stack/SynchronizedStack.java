@@ -15,31 +15,20 @@ public class SynchronizedStack<E> {
         this.size = 0;
     }
 
-    public synchronized void push(E e) {
-        while(size >= elements.length){
-            try {
-                wait();
-            } catch (InterruptedException interruptedException) {
-                interruptedException.printStackTrace();
-            }
-        }
+    public synchronized void push(E e) throws InterruptedException {
+        while(size >= elements.length)
+            wait();
         elements[size] = e;
         size++;
         notify();
     }
 
-    public synchronized E pop() {
-        while (size <= 0){
-            try {
-                wait();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
+    public synchronized E pop() throws InterruptedException {
+        while (size <= 0)
+            wait();
         size--;
-        var output = elements[size];
         notify();
-        return output;
+        return elements[size];
     }
 
     public int size() {

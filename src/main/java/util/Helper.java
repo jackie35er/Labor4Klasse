@@ -1,4 +1,4 @@
-package Labor3.Worker;
+package util;
 
 import lombok.SneakyThrows;
 

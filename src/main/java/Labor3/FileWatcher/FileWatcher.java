@@ -1,6 +1,6 @@
 package Labor3.FileWatcher;
 
-import Labor3.Worker.Helper;
+import util.Helper;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.File;

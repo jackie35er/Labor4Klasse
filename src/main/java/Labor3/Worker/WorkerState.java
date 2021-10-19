@@ -1,5 +1,7 @@
 package Labor3.Worker;
 
+import util.Helper;
+
 import java.util.Random;
 
 public enum WorkerState {
