@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="309.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Labor1.Calculator.CalculatorController">
+   <children>
+      <Slider fx:id="number1" blockIncrement="1.0" layoutX="23.0" layoutY="14.0" majorTickUnit="1.0" max="9.0" minorTickCount="1" prefHeight="62.0" prefWidth="262.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+      <ChoiceBox fx:id="number2" layoutX="23.0" layoutY="76.0" prefHeight="37.0" prefWidth="262.0" />
+      <RadioButton fx:id="radio1" layoutX="23.0" layoutY="146.0" mnemonicParsing="false" text="+">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="radio2" layoutX="24.0" layoutY="183.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="59.0" text="-">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="radio3" layoutX="25.0" layoutY="219.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="59.0" text="*">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="radio4" layoutX="24.0" layoutY="259.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="59.0" text="/">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </RadioButton>
+      <Label fx:id="result" layoutX="32.0" layoutY="314.0" prefHeight="27.0" prefWidth="243.0" text="Hier könnte ihre Werbung stehen">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
