@@ -31,7 +31,7 @@ public class SynchronizedStack<E> {
         return elements[size];
     }
 
-    public int size() {
+    public synchronized int size() {
         return size;
     }
 }
