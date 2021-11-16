@@ -1,4 +1,4 @@
-package util;
+package util.validator;
 
 import java.util.function.ToIntFunction;
 

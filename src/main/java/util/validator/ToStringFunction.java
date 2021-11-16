@@ -1,4 +1,4 @@
-package util;
+package util.validator;
 
 public interface ToStringFunction<T> {
 
