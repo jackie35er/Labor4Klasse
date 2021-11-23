@@ -15,7 +15,6 @@ public class Storage {
     private final int capacity;
     private int currentAmount;
     private List<Supplier> suppliers;
-    private List<Thread> supplierThreads;
 
     public Storage(int capacity) {
         this(capacity,new LogImpl(System.out));
@@ -39,7 +38,7 @@ public class Storage {
             throw new IllegalArgumentException("amount must be smaller than capacity");
         }
 
-        while(size() - amount < 0){
+        while(size() < amount){
             wait();
         }
         log.info("amount wird abgeholt: " + amount);
@@ -60,8 +59,7 @@ public class Storage {
         notify();
     }
 
-    public synchronized int size() {
-        notify();
+    public int size() {
         return currentAmount;
     }
 
@@ -70,7 +68,7 @@ public class Storage {
         new Thread(supplier).start();
     }
 
-    protected synchronized void notifySupplierDone(Supplier supplier) {
+    synchronized void notifySupplierDone(Supplier supplier) {
         suppliers.remove(supplier);
     }
 

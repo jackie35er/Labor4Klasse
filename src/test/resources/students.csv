@@ -1,0 +1,19 @@
+Last name,First name,Gender,Number,Class
+Missing first name,,m,1,1AHIF
+Ertl,Maximilian,d,3,1AHIF
+,Missing last name,m,2,1AHIF
+Frischmann,Tobias,d,4,1AHIF
+Krapfen,Tobias,m,No Number,1AHIF
+Gangl,Fabian Andreas,d,5,1AHIF
+Gams,Gundula,mdf,6,1AHIF
+Krapfenbauer,Lukas Anton,m,16,1AHIF
+Line,Contains Extra,m,17,1AHIF,
+Limani,Bilal,m,18,1AHIF
+Invalid,Class,m,23,1AHMBA
+Missing,Gender,,19,1AHIF
+Novotny,Isabella Iwona,w,20,1AHIF
+Missing,Number,m,,1AHIF
+Panic,Dijana,w,22,1AHIF
+Missing,Class,m,24,
+Pfeifer,Jonas,m,25,1AHIF
+Invalid,Number,m,37,1AHIF

@@ -1,10 +1,13 @@
 package Labor3.primzahlen;
 
+import util.Helper;
+
 import java.util.Map;
 import java.util.SortedSet;
 import java.util.TreeMap;
 import java.util.TreeSet;
 import java.util.concurrent.*;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class PrimeFinder {
@@ -12,31 +15,29 @@ public class PrimeFinder {
     private final SortedSet<Long> primes = new TreeSet<>();
     private ThreadPoolExecutor executor;
     private final int delay;
-    private final long fromInclusive;
-    private final long toExclusive;
+    private final int from;
+    private final int to;
 
-    public PrimeFinder(int delay, int fromInclusive, int toExclusive) {
-        if (toExclusive <= fromInclusive) throw new IllegalArgumentException();
+    public PrimeFinder(int delay, int from, int to) {
+        if (to <= from) throw new IllegalArgumentException();
         this.delay = delay;
-        this.fromInclusive = fromInclusive;
-        this.toExclusive = toExclusive;
+        this.from = from;
+        this.to = to;
     }
 
     public int countRunningCheckers() {
         return executor.getActiveCount();
     }
 
-    /**
-     * Teilt alle Zahlen in [from, to[ auf Threads auf,
-     * welche die Primalität der jeweiligen Zahl bestimmen
-     */
     public void findPrimes() {
-        executor = (ThreadPoolExecutor) Executors.newFixedThreadPool((int) (toExclusive - fromInclusive));
+        executor = (ThreadPoolExecutor) Executors.newFixedThreadPool((int) (to - from));
         Map<Long, Future<Boolean>> potentialPrimes = new TreeMap<>();
 
-        for (long i = fromInclusive; i < toExclusive; i++) {
-            potentialPrimes.put(i, executor.submit(new PrimeChecker(i, delay)));
-        }
+        IntStream.range(from,to)
+                .forEach((i) -> potentialPrimes.put(
+                        (long) i,
+                        executor.submit(new PrimeChecker(i, delay)))
+                );
 
         Thread daemon = new Thread(() -> {
             while(countRunningCheckers() != 0) {
@@ -68,11 +69,7 @@ public class PrimeFinder {
             }
         }
         System.out.print("]" + "\n");
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        Helper.sleep(1000);
     }
 
     public static void main(String[] args) {
