@@ -1,7 +1,7 @@
-package Labor5.persistence;
+package Labor5.persistence5;
 
-import Labor5.domain.Student;
-import Labor5.domain.Gender;
+import Labor5.domain5.Student;
+import Labor5.domain5.Gender;
 
 import java.sql.SQLException;
 import java.util.Map;

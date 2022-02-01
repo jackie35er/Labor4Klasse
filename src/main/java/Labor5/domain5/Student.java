@@ -1,6 +1,6 @@
-package Labor5.domain;
+package Labor5.domain5;
 
-import util.validator.interfaces.Validator;
+
 
 import java.util.Optional;
 

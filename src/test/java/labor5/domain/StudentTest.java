@@ -1,13 +1,13 @@
 package labor5.domain;
 
-import Labor5.domain.Student;
+import Labor5.domain5.Student;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.NullAndEmptySource;
 import org.junit.jupiter.params.provider.ValueSource;
 
-import static Labor5.domain.Gender.*;
+import static Labor5.domain5.Gender.*;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 

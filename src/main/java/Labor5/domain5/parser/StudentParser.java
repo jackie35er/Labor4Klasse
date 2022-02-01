@@ -1,8 +1,8 @@
-package Labor5.domain.parser;
+package Labor5.domain5.parser;
 
 
-import Labor5.domain.Gender;
-import Labor5.domain.Student;
+import Labor5.domain5.Gender;
+import Labor5.domain5.Student;
 
 import java.io.IOException;
 import java.nio.file.Files;

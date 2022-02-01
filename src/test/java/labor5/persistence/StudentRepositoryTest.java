@@ -1,8 +1,8 @@
 package labor5.persistence;
 
-import Labor5.domain.Student;
-import Labor5.persistence.JdbcStudentRepository;
-import Labor5.persistence.StudentRepository;
+import Labor5.domain5.Student;
+import Labor5.persistence5.JdbcStudentRepository;
+import Labor5.persistence5.StudentRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
@@ -13,9 +13,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
-import static Labor5.domain.Gender.*;
+import static Labor5.domain5.Gender.*;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 

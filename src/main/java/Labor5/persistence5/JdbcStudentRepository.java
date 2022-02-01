@@ -1,13 +1,11 @@
-package Labor5.persistence;
+package Labor5.persistence5;
 
-import Labor5.domain.Gender;
-import Labor5.domain.Student;
-import Labor5.domain.parser.StudentParser;
+import Labor5.domain5.Gender;
+import Labor5.domain5.Student;
 import org.jetbrains.annotations.NotNull;
 
 import java.sql.*;
 import java.util.*;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 

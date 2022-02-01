@@ -1,4 +1,4 @@
-package Labor5.domain;
+package Labor5.domain5;
 
 import java.util.Locale;
 

@@ -1,7 +1,7 @@
 package labor5.domain.parser;
 
-import Labor5.domain.Student;
-import Labor5.domain.parser.StudentParser;
+import Labor5.domain5.Student;
+import Labor5.domain5.parser.StudentParser;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
